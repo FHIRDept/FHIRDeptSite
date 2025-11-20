@@ -127,10 +127,13 @@ nav {
 }
 
 .logo {
-    font-size: 1.5rem;
-    font-weight: 700;
-    color: var(--primary-color);
-    font-family: var(--font-heading);
+    display: flex;
+    align-items: center;
+}
+
+.logo img {
+    height: 50px;
+    width: auto;
 }
 
 .nav-links {
