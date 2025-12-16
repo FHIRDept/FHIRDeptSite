@@ -123,7 +123,7 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    height: 80px;
+    height: 110px;
 }
 
 .logo {
@@ -132,7 +132,7 @@ nav {
 }
 
 .logo img {
-    height: 50px;
+    height: 90px;
     width: auto;
 }
 
@@ -163,7 +163,7 @@ nav {
     .nav-links {
         display: none;
         position: absolute;
-        top: 80px;
+        top: 110px;
         left: 0;
         width: 100%;
         background-color: var(--white);
@@ -308,4 +308,121 @@ footer {
     border-top: 1px solid rgba(255, 255, 255, 0.1);
     font-size: 0.9rem;
     color: var(--accent-color);
+}
+
+/* Contact Page Styles */
+.contact-grid {
+    grid-template-columns: 1fr 1fr;
+    align-items: start;
+}
+
+.contact-info {
+    padding-right: 2rem;
+}
+
+.contact-heading {
+    color: var(--primary-color);
+    margin-bottom: 1.5rem;
+}
+
+.contact-description {
+    margin-bottom: 1rem;
+}
+
+.contact-details {
+    margin-top: 2rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.contact-icon {
+    color: var(--secondary-color);
+    width: 30px;
+    font-size: 1.2rem;
+}
+
+.contact-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+.contact-form-container {
+    background: var(--bg-color);
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: var(--shadow-sm);
+}
+
+.form-heading {
+    margin-bottom: 1.5rem;
+}
+
+.form-group {
+    margin-bottom: 1rem;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+}
+
+.form-input,
+.form-textarea {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-family: var(--font-main);
+    transition: border-color 0.3s ease;
+}
+
+.form-input:focus,
+.form-textarea:focus {
+    outline: none;
+    border-color: var(--secondary-color);
+}
+
+.form-input.error,
+.form-textarea.error {
+    border-color: #dc3545;
+}
+
+.form-error {
+    color: #dc3545;
+    font-size: 0.875rem;
+    margin-top: 0.25rem;
+    display: none;
+}
+
+.form-error.show {
+    display: block;
+}
+
+@media (max-width: 768px) {
+    .contact-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+}
+
+/* About Page Styles */
+.about-section a {
+    color: var(--secondary-color);
+    text-decoration: underline;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.about-section a:hover {
+    color: var(--primary-color);
+    text-decoration: underline;
 }
