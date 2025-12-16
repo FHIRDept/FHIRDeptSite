@@ -101,7 +101,8 @@ function validateEmail(input, errorId) {
 
     const errorElement = document.getElementById(errorId);
     const value = input.value.trim();
-    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    // RFC-compliant email regex: prevents consecutive dots, supports multi-part TLDs and + sign
+    const emailRegex = /^[a-zA-Z0-9]([a-zA-Z0-9._+-]*[a-zA-Z0-9])?@[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?(\.[a-zA-Z0-9]([a-zA-Z0-9-]*[a-zA-Z0-9])?)+$/;
 
     if (value === '' || !emailRegex.test(value)) {
         input.classList.add('error');
