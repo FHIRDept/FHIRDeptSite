@@ -3,10 +3,10 @@ document.addEventListener('DOMContentLoaded', () => {
     const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
     const navLinks = document.querySelector('.nav-links');
 
-    if (mobileMenuBtn) {
+    if (mobileMenuBtn && navLinks) {
         mobileMenuBtn.addEventListener('click', () => {
             const isExpanded = navLinks.classList.toggle('active');
-            mobileMenuBtn.setAttribute('aria-expanded', isExpanded);
+            mobileMenuBtn.setAttribute('aria-expanded', String(isExpanded));
         });
 
         // Initialize aria-expanded attribute
@@ -37,6 +37,12 @@ function initFormValidation(form) {
     const nameInput = form.querySelector('#name');
     const emailInput = form.querySelector('#email');
     const messageInput = form.querySelector('#message');
+
+    // Verify all inputs exist before adding event listeners
+    if (!nameInput || !emailInput || !messageInput) {
+        console.warn('Form validation: Required form inputs not found');
+        return;
+    }
 
     // Real-time validation
     nameInput.addEventListener('blur', () => validateField(nameInput, 'name-error'));
@@ -70,6 +76,8 @@ function initFormValidation(form) {
 }
 
 function validateField(input, errorId) {
+    if (!input) return false;
+
     const errorElement = document.getElementById(errorId);
     const value = input.value.trim();
 
@@ -89,6 +97,8 @@ function validateField(input, errorId) {
 }
 
 function validateEmail(input, errorId) {
+    if (!input) return false;
+
     const errorElement = document.getElementById(errorId);
     const value = input.value.trim();
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
