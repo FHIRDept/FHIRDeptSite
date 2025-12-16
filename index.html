@@ -8,6 +8,15 @@
     <meta name="description"
         content="The FHIR Department is an organization dedicated to building a community to unlock the value of FHIR in healthcare.">
 
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="manifest" href="images/site.webmanifest">
+
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -26,7 +35,7 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <img src="images/FHIRDeptLogo.jpg" alt="FHIR Dept Logo" style="height: 50px; width: auto;">
+                    <img src="images/FHIRDeptLogo.jpg" alt="FHIR Dept Logo" style="height: 90px; width: auto;">
                 </a>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -108,18 +117,18 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> fhirdept@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> (443) 280-9612</p>
+                    <p><a href="mailto:fhirdept@gmail.com" style="color: var(--white); text-decoration: none;" aria-label="Email us at fhirdept@gmail.com"><i class="fas fa-envelope"></i> fhirdept@gmail.com</a></p>
+                    <p><a href="tel:+14432809612" style="color: var(--white); text-decoration: none;" aria-label="Call us at 443-280-9612"><i class="fas fa-phone"></i> (443) 280-9612</a></p>
                     <p><a href="https://www.linkedin.com/groups/14439457/" target="_blank"
-                            style="color: var(--white); text-decoration: none;"><i class="fab fa-linkedin"></i>
+                            style="color: var(--white); text-decoration: none;" aria-label="Join our LinkedIn Group"><i class="fab fa-linkedin"></i>
                             LinkedIn</a></p>
                     <p><a href="https://fhirdepartment.slack.com" target="_blank"
-                            style="color: var(--white); text-decoration: none;"><i class="fab fa-slack"></i> Slack</a>
+                            style="color: var(--white); text-decoration: none;" aria-label="Join our Slack Community"><i class="fab fa-slack"></i> Slack</a>
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 FHIR Department. All rights reserved. <br>FHIR® is a trademark of HL7 and is used with
+                <p>&copy; <span id="currentYear">2025</span> FHIR Department. All rights reserved. <br>FHIR® is a trademark of HL7 and is used with
                     permission. This does not constitute an endorsement of our content or events by HL7. </p>
             </div>
         </div>

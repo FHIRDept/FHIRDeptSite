@@ -5,7 +5,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Get Involved | FHIR Dept</title>
-    <meta name="description" content="Contact the FHIR Department to join the dicussion.">
+    <meta name="description" content="Contact the FHIR Department to join the discussion.">
+
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="images/android-chrome-192x192.png">
+    <link rel="icon" type="image/png" sizes="512x512" href="images/android-chrome-512x512.png">
+    <link rel="manifest" href="images/site.webmanifest">
 
     <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -25,7 +34,7 @@
         <div class="container">
             <nav>
                 <a href="index.html" class="logo">
-                    <img src="images/FHIRDeptLogo.jpg" alt="FHIR Dept Logo" style="height: 50px; width: auto;">
+                    <img src="images/FHIRDeptLogo.jpg" alt="FHIR Dept Logo" style="height: 90px; width: auto;">
                 </a>
                 <div class="mobile-menu-btn">
                     <i class="fas fa-bars"></i>
@@ -52,65 +61,54 @@
 
         <section class="features">
             <div class="container">
-                <div class="features-grid" style="grid-template-columns: 1fr 1fr; align-items: start;">
+                <div class="features-grid contact-grid">
                     <!-- Contact Info -->
-                    <div style="padding-right: 2rem;">
-                        <h2 style="color: var(--primary-color); margin-bottom: 1.5rem;">Contact Us</h2>
-                        <p style="margin-bottom: 1rem;">We'd love to hear from you! Whether you want to volunteer,
+                    <div class="contact-info">
+                        <h2 class="contact-heading">Contact Us</h2>
+                        <p class="contact-description">We'd love to hear from you! Whether you want to volunteer,
                             suggest activities, or just say hello, please reach out.</p>
 
-                        <div style="margin-top: 2rem;">
-                            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                <i class="fas fa-envelope"
-                                    style="color: var(--secondary-color); width: 30px; font-size: 1.2rem;"></i>
-                                <span>fhirdept@gmail.com</span>
+                        <div class="contact-details">
+                            <div class="contact-item">
+                                <i class="fas fa-envelope contact-icon"></i>
+                                <a href="mailto:fhirdept@gmail.com" class="contact-link">fhirdept@gmail.com</a>
                             </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                <i class="fas fa-phone"
-                                    style="color: var(--secondary-color); width: 30px; font-size: 1.2rem;"></i>
-                                <span>(443) 280-9612</span>
+                            <div class="contact-item">
+                                <i class="fas fa-phone contact-icon"></i>
+                                <a href="tel:+14432809612" class="contact-link">(443) 280-9612</a>
                             </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                <i class="fab fa-linkedin"
-                                    style="color: var(--secondary-color); width: 30px; font-size: 1.2rem;"></i>
-                                <a href="https://www.linkedin.com/groups/14439457/" target="_blank"
-                                    style="text-decoration: none; color: inherit;">LinkedIn Group</a>
+                            <div class="contact-item">
+                                <i class="fab fa-linkedin contact-icon"></i>
+                                <a href="https://www.linkedin.com/groups/14439457/" target="_blank" class="contact-link"
+                                    aria-label="Join our LinkedIn Group">LinkedIn Group</a>
                             </div>
-                            <div style="display: flex; align-items: center; margin-bottom: 1rem;">
-                                <i class="fab fa-slack"
-                                    style="color: var(--secondary-color); width: 30px; font-size: 1.2rem;"></i>
-                                <a href="https://fhirdepartment.slack.com" target="_blank"
-                                    style="text-decoration: none; color: inherit;">Slack Community</a>
+                            <div class="contact-item">
+                                <i class="fab fa-slack contact-icon"></i>
+                                <a href="https://fhirdepartment.slack.com" target="_blank" class="contact-link"
+                                    aria-label="Join our Slack Community">Slack Community</a>
                             </div>
                         </div>
 
                         <!-- Contact Form -->
-                        <div
-                            style="background: var(--bg-color); padding: 2rem; border-radius: 8px; box-shadow: var(--shadow-sm);">
-                            <h3 style="margin-bottom: 1.5rem;">Send a Message</h3>
-                            <form action="https://formspree.io/f/xvglydpz" method="POST">
-                                <!-- Replace YOUR_FORM_ID with your actual Formspree ID -->
-                                <div style="margin-bottom: 1rem;">
-                                    <label for="name"
-                                        style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Name</label>
-                                    <input type="text" id="name" name="name"
-                                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"
-                                        required>
+                        <div class="contact-form-container">
+                            <h3 class="form-heading">Send a Message</h3>
+                            <form action="https://formspree.io/f/xvglydpz" method="POST" id="contactForm" novalidate>
+                                <div class="form-group">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" id="name" name="name" class="form-input" required>
+                                    <span class="form-error" id="name-error">Please enter your name</span>
                                 </div>
-                                <div style="margin-bottom: 1rem;">
-                                    <label for="email"
-                                        style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Email</label>
-                                    <input type="email" id="email" name="email"
-                                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"
-                                        required>
+                                <div class="form-group">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" id="email" name="email" class="form-input" required>
+                                    <span class="form-error" id="email-error">Please enter a valid email address</span>
                                 </div>
-                                <div style="margin-bottom: 1rem;">
-                                    <label for="message"
-                                        style="display: block; margin-bottom: 0.5rem; font-weight: 500;">Message</label>
-                                    <textarea id="message" name="message" rows="4"
-                                        style="width: 100%; padding: 0.8rem; border: 1px solid #ddd; border-radius: 4px;"
-                                        required></textarea>
+                                <div class="form-group">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea id="message" name="message" rows="4" class="form-textarea" required></textarea>
+                                    <span class="form-error" id="message-error">Please enter a message</span>
                                 </div>
+                                <input type="text" name="company_website" style="position: absolute; left: -9999px; width: 1px; height: 1px;" tabindex="-1" autocomplete="off" aria-hidden="true">
                                 <button type="submit" class="btn btn-primary" style="width: 100%;">Send Message</button>
                             </form>
                         </div>
@@ -136,18 +134,18 @@
                 </div>
                 <div class="footer-section">
                     <h3>Contact Us</h3>
-                    <p><i class="fas fa-envelope"></i> fhirdept@gmail.com</p>
-                    <p><i class="fas fa-phone"></i> (443) 280-9612</p>
+                    <p><a href="mailto:fhirdept@gmail.com" style="color: var(--white); text-decoration: none;" aria-label="Email us at fhirdept@gmail.com"><i class="fas fa-envelope"></i> fhirdept@gmail.com</a></p>
+                    <p><a href="tel:+14432809612" style="color: var(--white); text-decoration: none;" aria-label="Call us at 443-280-9612"><i class="fas fa-phone"></i> (443) 280-9612</a></p>
                     <p><a href="https://www.linkedin.com/groups/14439457/" target="_blank"
-                            style="color: var(--white); text-decoration: none;"><i class="fab fa-linkedin"></i>
+                            style="color: var(--white); text-decoration: none;" aria-label="Join our LinkedIn Group"><i class="fab fa-linkedin"></i>
                             LinkedIn</a></p>
                     <p><a href="https://fhirdepartment.slack.com" target="_blank"
-                            style="color: var(--white); text-decoration: none;"><i class="fab fa-slack"></i> Slack</a>
+                            style="color: var(--white); text-decoration: none;" aria-label="Join our Slack Community"><i class="fab fa-slack"></i> Slack</a>
                     </p>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2025 FHIR Department. All rights reserved. <br>FHIR® is a trademark of HL7 and is used with
+                <p>&copy; <span id="currentYear">2025</span> FHIR Department. All rights reserved. <br>FHIR® is a trademark of HL7 and is used with
                     permission. This does not constitute an endorsement of our content or events by HL7. </p>
             </div>
         </div>
